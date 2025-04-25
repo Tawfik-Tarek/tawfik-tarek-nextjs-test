@@ -5,7 +5,7 @@ import MobileMenuWrapper from "./mobile-menu-wrapper";
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between container mt-[4.375rem] mx-auto px-6 md:px-10 lg:px-14 very-large:mx-[20rem] max-w-[1280px] relative">
+    <header className="flex items-center justify-between container mt-[4.375rem] mx-auto px-6 md:px-10 lg:px-14 very-large:px-[20rem] max-w-[1280px] relative">
       <Logo />
       <Nav />
       <div className="hidden lg:flex items-center">
