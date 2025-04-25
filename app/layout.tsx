@@ -1,14 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Volkhov, Poppins, Jost } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const volkhov = Volkhov({
+  variable: "--font-volkhov",
+  weight: "400",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const jost = Jost({
+  variable: "--font-jost",
+  weight: "400",
   subsets: ["latin"],
 });
 
@@ -25,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${volkhov.variable} ${poppins.variable} ${jost.variable} antialiased`}
       >
         {children}
       </body>
