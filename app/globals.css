@@ -11,13 +11,10 @@
   --font-volkhov: var(--font-volkhov);
   --font-poppins: var(--font-poppins);
   --font-jost: var(--font-jost);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: #484848;
+
+  --breakpoint-very-large: 1860px;
 }
 
 body {

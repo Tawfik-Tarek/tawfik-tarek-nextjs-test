@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Volkhov, Poppins, Jost } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/layout/header";
 
 const volkhov = Volkhov({
   variable: "--font-volkhov",
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body
         className={`${volkhov.variable} ${poppins.variable} ${jost.variable} antialiased`}
       >
+        <Header />
         {children}
       </body>
     </html>
