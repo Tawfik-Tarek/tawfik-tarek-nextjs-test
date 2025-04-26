@@ -14,8 +14,8 @@ export default function Header() {
           <Image
             src="/icons/search.svg"
             alt="search"
-            width={10}
-            height={10}
+            width={20}
+            height={20}
             className="cursor-pointer"
           />
         </div>
@@ -23,8 +23,8 @@ export default function Header() {
           <Image
             src="/icons/user.svg"
             alt="user"
-            width={10}
-            height={10}
+            width={20}
+            height={20}
             className="cursor-pointer"
           />
         </div>
@@ -32,8 +32,8 @@ export default function Header() {
           <Image
             src="/icons/star.svg"
             alt="star"
-            width={10}
-            height={10}
+            width={20}
+            height={20}
             className="cursor-pointer"
           />
         </div>

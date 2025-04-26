@@ -12,12 +12,12 @@ export default function CartIcon() {
       <Image
         src="/icons/cart.svg"
         alt="cart"
-        width={10}
-        height={10}
+        width={20}
+        height={20}
         className="cursor-pointer"
       />
       {items.length > 0 && (
-        <div className="absolute top-1 -right-[0.5px] bg-[#FF0606] text-white rounded-full w-4 h-4 text-xs flex items-center justify-center font-volkhov">
+        <div className="absolute top-2 -right-1 bg-[#FF0606] text-white rounded-full w-6 h-6 text-xs flex items-center justify-center font-volkhov">
           {items.length}
         </div>
       )}
