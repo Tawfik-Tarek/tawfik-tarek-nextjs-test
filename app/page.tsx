@@ -1,4 +1,3 @@
-import ProductCard from "@/components/products/product-card";
 import ProductList from "@/components/products/product-list";
 import { fetchProducts } from "@/lib/api";
 
