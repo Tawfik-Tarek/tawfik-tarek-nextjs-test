@@ -78,7 +78,7 @@ The project follows a clean architecture pattern:
 
 ```bash
 # Clone the repository
-git clone [repository-url]
+git clone https://github.com/Tawfik-Tarek/tawfik-tarek-nextjs-test
 
 # Install dependencies
 npm install
