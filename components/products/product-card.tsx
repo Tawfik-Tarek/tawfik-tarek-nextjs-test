@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ProductCard({product}: {product: Product}) {
   return (
-    <Link href={`/products/${product.id}`} className="group">
+    <Link href={`/product/${product.id}`} className="group">
       <div className="flex flex-col gap-5 px-[0.75rem] max-w-[326px]">
         <Image
           src={product.image}
