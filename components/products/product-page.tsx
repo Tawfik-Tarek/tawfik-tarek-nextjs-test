@@ -5,6 +5,7 @@ import Logo from "../ui/logo";
 import Rating from "./rating";
 import { useState } from "react";
 import Image from "next/image";
+import { useCartStore } from "@/stores/cart-store";
 
 interface ProductPageProps {
   product: Product;
@@ -12,11 +13,15 @@ interface ProductPageProps {
 
 export default function ProductPage({ product }: ProductPageProps) {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useCartStore();
   const handleIncrement = () => {
     setQuantity((prev) => prev + 1);
   };
   const handleDecrement = () => {
     setQuantity((prev) => (prev > 1 ? prev - 1 : prev));
+  };
+  const handleAddToCart = () => {
+    addToCart(product, quantity);
   };
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 container mt-[4.875rem] mx-auto px-6 md:px-10 lg:px-14 very-large:px-[20rem] max-w-[1280px]">
@@ -79,13 +84,16 @@ export default function ProductPage({ product }: ProductPageProps) {
                 <span>+</span>
               </button>
             </div>
-            <button className="border border-black rounded-[5px] py-6 px-12 lg:py-10 lg:px-16 xl:py-[0.688rem] xl:px-[11.189rem] w-full hover:bg-primary hover:text-white transition duration-300 ease-in-out cursor-pointer">
+            <button
+              className="border border-black rounded-[5px] py-6 px-12 lg:py-10 lg:px-16 xl:py-[0.688rem] xl:px-[11.189rem] w-full hover:bg-primary hover:text-white transition duration-300 ease-in-out cursor-pointer"
+              onClick={handleAddToCart}
+            >
               Add to Cart
             </button>
           </div>
         </div>
 
-        <div>
+        <div className="border-b pb-3 border-b-[#EEEEEE]">
           <Image
             src="/icons/share.svg"
             alt="share"

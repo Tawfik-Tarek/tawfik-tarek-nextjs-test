@@ -2,6 +2,7 @@
 import Image from "next/image";
 import DropDown from "../ui/dropdown";
 import NavItem from "./nav-item";
+import CartIcon from "../cart/cart-icon";
 
 export default function MobileNav() {
   return (
@@ -34,15 +35,7 @@ export default function MobileNav() {
             />
           </div>
         </DropDown>
-        <div className="px-[0.813rem] py-[1.188rem]">
-          <Image
-            src="/icons/cart.svg"
-            alt="cart"
-            width={20}
-            height={20}
-            className="cursor-pointer"
-          />
-        </div>
+        <CartIcon />
     </div>
   );
 }

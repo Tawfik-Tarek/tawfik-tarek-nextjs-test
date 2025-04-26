@@ -2,6 +2,7 @@ import Image from "next/image";
 import Logo from "../ui/logo";
 import Nav from "./nav";
 import MobileMenuWrapper from "./mobile-menu-wrapper";
+import CartIcon from "../cart/cart-icon";
 
 export default function Header() {
   return (
@@ -36,15 +37,7 @@ export default function Header() {
             className="cursor-pointer"
           />
         </div>
-        <div className="px-[0.813rem] py-[1.188rem]">
-          <Image
-            src="/icons/cart.svg"
-            alt="cart"
-            width={10}
-            height={10}
-            className="cursor-pointer"
-          />
-        </div>
+        <CartIcon />
       </div>
       <MobileMenuWrapper />
     </header>
